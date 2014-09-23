@@ -9,7 +9,7 @@ bash 'make & install phpredis' do
   tar zxf phpredis.tar.gz
   cd phpredis-master
   phpize
-  ./configure
+  ./configure --enable-redis-igbinary
   make && make install
   EOF
   not_if 'php -m | grep redis'
