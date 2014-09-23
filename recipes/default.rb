@@ -6,6 +6,7 @@ end
 bash 'make & install phpredis' do
   cwd Chef::Config[:file_cache_path]
   code <<-EOF
+  pecl install igbinary
   tar zxf phpredis.tar.gz
   cd phpredis-master
   phpize
