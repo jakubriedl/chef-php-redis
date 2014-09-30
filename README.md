@@ -6,7 +6,10 @@ Chef cookbook to download and install the PHP extension redis - https://github.c
 ## Attributes
 
 ```
-node['php_redis']['url'] = 'https://github.com/nicolasff/phpredis/archive/master.tar.gz'
+node['php-redis']['url'] = 'https://github.com/nicolasff/phpredis/archive/master.tar.gz'
+node['php-redis']['igbinary'] = true
+node['php-redis']['conf_dirs'] = ['/etc/php.d']
+node['php-redis']['conf_file'] = 'redis.ini'
 ```
 
 ## Usage
