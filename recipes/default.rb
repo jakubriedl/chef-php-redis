@@ -13,7 +13,7 @@ bash 'make & install phpredis' do
   EOF
 end
 
-node['php-redis']['conf_dirs'].each do |conf_dir|
+node['php']['conf_dirs'].each do |conf_dir|
 	file "#{conf_dir}/#{node['php-redis']['conf_file']}" do
 		owner 'root'
 		group 'root'
